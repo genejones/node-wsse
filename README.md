@@ -2,7 +2,7 @@
 
 WSSE Username Token generator for Browserify
 
-Based off the excellent (node-wsse by boyuza)[https://travis-ci.org/bouzuya/node-wsse], but optimized for in browser usage.
+Based off the excellent [node-wsse by boyuza](https://travis-ci.org/bouzuya/node-wsse), but optimized for in browser usage.
 Because node-wsse requires the entire crypto module, this module can be over 400KB when minified!
 But the module really only uses SHA1, which is less than 30KB.
 To solve this, we just load only the SHA-1, via sha.js. All other usage is identical.
