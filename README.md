@@ -1,6 +1,11 @@
 # WSSE
 
-WSSE Username Token generator for Node.js
+WSSE Username Token generator for Browserify
+
+Based off the excellent (node-wsse by boyuza)[https://travis-ci.org/bouzuya/node-wsse], but optimized for in browser usage.
+Because node-wsse requires the entire crypto module, this module can be over 400KB when minified!
+But the module really only uses SHA1, which is less than 30KB.
+To solve this, we just load only the SHA-1, via sha.js. All other usage is identical.
 
 See: http://www.xml.com/pub/a/2003/12/17/dive.html
 
@@ -57,24 +62,12 @@ console.log(token2.getWSSEHeader({ nonceBase64: true }));
 console.log(token2.toString({ nonceBase64: true }));
 ```
 
-## Badges
-
-[![Build Status](https://travis-ci.org/bouzuya/node-wsse.svg)](https://travis-ci.org/bouzuya/node-wsse)
-
 ## License
-
-### >=2.0.0
 
 [MIT](LICENSE)
 
-### <1.0.0
-
-ISC
 
 ## Author
 
-[bouzuya][user] &lt;[m@bouzuya.net][email]&gt; ([http://bouzuya.net][url])
-
-[user]: https://github.com/bouzuya
-[email]: mailto:m@bouzuya.net
-[url]: http://bouzuya.net
+[user]: https://github.com/generjones
+[email]: mailto:iam@genejon.es
